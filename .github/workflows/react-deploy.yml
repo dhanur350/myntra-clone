@@ -5,6 +5,12 @@ on:
     branches:
       - master # Triggers on pushes to the master branch
 
+# Add these permissions:
+permissions:
+  contents: write  # Allows the action to write to the repository (needed by the deploy action)
+  pages: write     # Allows the action to manage GitHub Pages deployment
+  id-token: write 
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

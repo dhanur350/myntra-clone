@@ -1,4 +1,8 @@
 name: Deploy React App to GitHub Pages
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./build 
 
 on:
   push:
@@ -37,3 +41,4 @@ jobs:
           publish_dir: ./build 
           # You might need to add this line if you use client-side routing like React Router:
           # cname: yourcustomdomain.com 
+
